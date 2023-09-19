@@ -20,7 +20,7 @@ export function NavItem({ link }: { link: ExtendedLinkObject }) {
         <Image
           src={link.logo}
           alt={link.logoAlt}
-          className={clsx('h-6 w-6', isActive ? 'primary-icon-color' : '')}
+          className="h-6 w-6 group-hover:fill-pink-800 group-hover:dark:fill-secondary-color"
           unoptimized
         />
         <span>{link.name}</span>
