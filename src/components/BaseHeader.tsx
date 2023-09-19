@@ -188,21 +188,25 @@ function AvatarContainer({
 }
 
 function Avatar({
+  avatar,
+  avatarDirection,
   large = false,
   className,
   ...props
 }: Omit<React.ComponentPropsWithoutRef<typeof Link>, 'href'> & {
+  avatar: string;
+  avatarDirection: string;
   large?: boolean;
 }) {
   return (
     <Link
-      href="/"
+      href={avatarDirection}
       aria-label="Home"
       className={clsx(className, 'pointer-events-auto')}
       {...props}
     >
       <Image
-        src={avatarImage}
+        src={avatar}
         alt=""
         sizes={large ? '4rem' : '2.25rem'}
         className={clsx(
@@ -368,6 +372,8 @@ export function BaseHeader({
                     }}
                   />
                   <Avatar
+                    avatar={avatar}
+                    avatarDirection={avatarDirection}
                     large
                     className="block h-16 w-16 origin-left"
                     style={{ transform: 'var(--avatar-image-transform)' }}
@@ -396,7 +402,7 @@ export function BaseHeader({
               <div className="flex flex-1">
                 {!isHomePage && (
                   <AvatarContainer>
-                    <Avatar />
+                    <Avatar avatar={avatar} avatarDirection={avatarDirection} />
                   </AvatarContainer>
                 )}
               </div>
