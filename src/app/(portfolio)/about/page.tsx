@@ -4,12 +4,7 @@ import Link from 'next/link';
 import clsx from 'clsx';
 
 import { Container } from '@/components/Container';
-import {
-  GitHubIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  TwitterIcon,
-} from '@/components/SocialIcons';
+import { GitHubIcon, DiscordIcon } from '@/components/SocialIcons';
 import portraitImage from '@/images/portrait.png';
 
 function SocialLink({
@@ -103,17 +98,19 @@ export default function About() {
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="#" icon={TwitterIcon}>
-              Follow on Twitter
+            <SocialLink
+              href="https://discord.com/users/163744967049609216"
+              icon={DiscordIcon}
+              className="mt-4"
+            >
+              Add me on Discord
             </SocialLink>
-            <SocialLink href="#" icon={InstagramIcon} className="mt-4">
-              Follow on Instagram
-            </SocialLink>
-            <SocialLink href="#" icon={GitHubIcon} className="mt-4">
-              Follow on GitHub
-            </SocialLink>
-            <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
-              Follow on LinkedIn
+            <SocialLink
+              href="https://github.com/maevdb/"
+              icon={GitHubIcon}
+              className="mt-4"
+            >
+              Follow me on GitHub
             </SocialLink>
             <SocialLink
               href="mailto:mae.vdb@outlook.com"
