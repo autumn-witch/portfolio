@@ -10,6 +10,10 @@ export const links: Array<LinkObject> = [
     name: 'About',
   },
   {
+    path: '/articles',
+    name: 'Articles',
+  },
+  {
     path: '/projects',
     name: 'Projects',
   },
