@@ -13,7 +13,7 @@ async function contactBackend() {
 }
 
 export default async function defaultContent() {
-  const hello = await contactBackend();
+  // const hello = await contactBackend();
   return (
     <Container className="mt-16 sm:mt-32">
       <div className="max-w-2xl">
