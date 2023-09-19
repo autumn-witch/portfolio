@@ -12,7 +12,7 @@ function NavLink({
   children: React.ReactNode;
 }) {
   return (
-    <Link href={href} className="hover:primary-color transition">
+    <Link href={href} className="transition hover:text-secondary-color">
       {children}
     </Link>
   );
