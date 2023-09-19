@@ -2,7 +2,11 @@ import { type Metadata } from 'next';
 
 import { Card } from '@/components/Card';
 import { SimpleLayout } from '@/components/SimpleLayout';
-import { type ArticleWithSlug, getAllArticles } from '@/lib/articles';
+
+import { getAllArticles } from '@/modules/Portfolio/articles';
+
+import { ArticleWithSlug } from '@/typings/articles';
+
 import { formatDate } from '@/lib/formatDate';
 
 function Article({ article }: { article: ArticleWithSlug }) {
@@ -41,8 +45,7 @@ export const metadata: Metadata = {
 };
 
 export default async function ArticlesIndex() {
-  let articles = await getAllArticles();
-
+  const articles = await getAllArticles();
   return (
     <SimpleLayout
       title="Writing on software design, company building, and the aerospace industry."

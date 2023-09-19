@@ -1,7 +1,4 @@
-export type LinkObject = {
-  path: string;
-  name: string;
-};
+import { LinkObject } from '@/typings/links';
 
 export const links: Array<LinkObject> = [
   {

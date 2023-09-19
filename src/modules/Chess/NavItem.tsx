@@ -2,27 +2,19 @@
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import clsx from 'clsx';
-import Image, { type ImageProps } from 'next/image';
+import Image from 'next/image';
 
-export type LinkObject = {
-  href: string;
-  name: string;
-  logo: ImageProps['src'];
-  logoAlt: string;
-};
+import { ExtendedLinkObject } from '@/typings/links';
 
-export function NavItem({ link }: { link: LinkObject }) {
-  console.log(link);
-  const isActive = usePathname() === link.href;
+export function NavItem({ link }: { link: ExtendedLinkObject }) {
+  const isActive = usePathname() === link.path;
   return (
     <li className="ml-8 w-32">
       <Link
-        href={link.href}
+        href={link.path}
         className={clsx(
-          'group flex gap-x-3 rounded-full p-2 text-sm font-semibold leading-6',
-          isActive
-            ? 'secondary-bg text-black'
-            : 'hover:secondary-bg dark:text-white hover:dark:text-black',
+          'group flex gap-x-3 rounded-full p-2 text-sm font-semibold leading-6 hover:text-pink-800 hover:dark:text-secondary-color',
+          isActive ? 'text-main-color' : 'dark:text-white',
         )}
       >
         <Image
