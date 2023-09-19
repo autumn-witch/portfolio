@@ -24,5 +24,11 @@ export default {
       '9xl': ['8rem', { lineHeight: '1' }],
     },
     typography: typographyStyles,
+    extend: {
+      colors: {
+        'main-color': '#c76fb5',
+        'secondary-color': '#f4b7df',
+      },
+    },
   },
 } satisfies Config
