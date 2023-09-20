@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
-import { links } from './misc';
+import { links } from '@/lib/misc';
 
-import { ContainerInner, ContainerOuter } from '@/components/Container';
+import { ContainerInner, ContainerOuter } from '@/BaseComponents/Container';
 
 function NavLink({
   href,

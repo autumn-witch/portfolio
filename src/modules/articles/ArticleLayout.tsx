@@ -4,23 +4,14 @@ import { useContext } from 'react';
 import { useRouter } from 'next/navigation';
 
 import { AppContext } from '@/app/providers';
-import { Container } from '@/components/Container';
-import { Prose } from '@/components/Prose';
-import { ArticleWithSlug } from '@/typings/articles';
-import { formatDate } from '@/lib/formatDate';
 
-function ArrowLeftIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
-      <path
-        d="M7.25 11.25 3.75 8m0 0 3.5-3.25M3.75 8h8.5"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
+import { Container } from '@/BaseComponents/Container';
+import { Prose } from '@/BaseComponents/Prose';
+import { ArrowLeftIcon } from '../../BaseComponents/Icons/ArrowLeftIcon';
+
+import { ArticleWithSlug } from '@/modules/articles/types';
+
+import { formatDate } from '@/lib/formatDate';
 
 export function ArticleLayout({
   article,
@@ -29,8 +20,8 @@ export function ArticleLayout({
   article: ArticleWithSlug;
   children: React.ReactNode;
 }) {
-  let router = useRouter();
-  let { previousPathname } = useContext(AppContext);
+  const router = useRouter();
+  const { previousPathname } = useContext(AppContext);
 
   return (
     <Container className="mt-16 lg:mt-32">

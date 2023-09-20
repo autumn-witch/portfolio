@@ -7,39 +7,16 @@ import { usePathname } from 'next/navigation';
 import { Popover, Transition } from '@headlessui/react';
 import clsx from 'clsx';
 
-import { Container } from '@/components/Container';
-import { ThemeToggle } from '@/components/ThemeToggle';
+import { Container } from '@/BaseComponents/Container';
+import { ThemeToggle } from '@/BaseComponents/ThemeToggle';
+import { ChevronDownIcon } from './Icons/ChevronDownIcon';
+import { CloseIcon } from './Icons/CloseIcon';
 
-import { LinkObject } from '@/typings/links';
+import avatar from '@/images/avatar.png';
 
-function CloseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path
-        d="m17.25 6.75-10.5 10.5M6.75 6.75l10.5 10.5"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
+import { clamp } from '@/lib/misc';
 
-function ChevronDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 8 6" aria-hidden="true" {...props}>
-      <path
-        d="M1.75 1.75 4 4.25l2.25-2.5"
-        fill="none"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
+import { LinkObject } from '@/types/links';
 
 function MobileNavItem({
   href,
@@ -166,12 +143,6 @@ function DesktopNavigation({
   );
 }
 
-function clamp(number: number, a: number, b: number) {
-  let min = Math.min(a, b);
-  let max = Math.max(a, b);
-  return Math.min(Math.max(number, min), max);
-}
-
 function AvatarContainer({
   className,
   ...props
@@ -188,19 +159,16 @@ function AvatarContainer({
 }
 
 function Avatar({
-  avatar,
-  avatarDirection,
   large = false,
   className,
   ...props
 }: Omit<React.ComponentPropsWithoutRef<typeof Link>, 'href'> & {
-  avatar: string;
-  avatarDirection: string;
   large?: boolean;
 }) {
+  // TODO add alt text to avatar
   return (
     <Link
-      href={avatarDirection}
+      href="/"
       aria-label="Home"
       className={clsx(className, 'pointer-events-auto')}
       {...props}
@@ -219,15 +187,7 @@ function Avatar({
   );
 }
 
-export function BaseHeader({
-  links,
-  avatar,
-  avatarDirection,
-}: {
-  links: LinkObject[];
-  avatar: any;
-  avatarDirection: string;
-}) {
+export function BaseHeader({ links }: { links: LinkObject[] }) {
   let isHomePage = usePathname() === '/';
 
   let headerRef = useRef<React.ElementRef<'div'>>(null);
@@ -372,8 +332,6 @@ export function BaseHeader({
                     }}
                   />
                   <Avatar
-                    avatar={avatar}
-                    avatarDirection={avatarDirection}
                     large
                     className="block h-16 w-16 origin-left"
                     style={{ transform: 'var(--avatar-image-transform)' }}
@@ -402,7 +360,7 @@ export function BaseHeader({
               <div className="flex flex-1">
                 {!isHomePage && (
                   <AvatarContainer>
-                    <Avatar avatar={avatar} avatarDirection={avatarDirection} />
+                    <Avatar />
                   </AvatarContainer>
                 )}
               </div>

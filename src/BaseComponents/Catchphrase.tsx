@@ -1,28 +1,23 @@
-import { ColoredText } from '@/components/ColoredText';
-
-export const catchPhraseString = `Hello! I'm Mae, a self-taught web developer who loves JavaScript.
-	I strongly believe in a human and accessible web.
-	On my free time, aside from writing web applications, I love to read,
-	I'm a LGBTQIA+ activist, and lately I've been trying to learn how to
-	cook as well as play piano.`;
+import { ColoredText } from '@/BaseComponents/ColoredText';
 
 export function Catchphrase({
   hasHeader = false,
   hasInfos = false,
-}: {
+  ...props
+}: React.ComponentPropsWithoutRef<'section'> & {
   hasHeader?: boolean;
   hasInfos?: boolean;
 }) {
   return (
-    <p>
+    <section {...props}>
       {hasHeader && (
-        <>
+        <div>
           Hello! I'm <ColoredText content="Mae" />, a self-taught web developer
           who <em className="italic">loves</em> JavaScript.
-        </>
+        </div>
       )}
       {hasInfos && (
-        <p>
+        <div>
           I strongly believe in a <ColoredText content="human" /> and
           <ColoredText content=" accessible" /> web.
           <br />
@@ -33,8 +28,8 @@ export function Catchphrase({
           <ColoredText content=" LGBTQIA+ activist" />, and lately I've been
           trying to learn how to <ColoredText content="cook " />
           as well as <ColoredText content=" play piano" />.
-        </p>
+        </div>
       )}
-    </p>
+    </section>
   );
 }
