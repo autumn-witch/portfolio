@@ -9,6 +9,8 @@ import {
   GitHubIcon,
   LinkedInIcon,
 } from '@/components/SocialIcons';
+import { ExternalLink } from '@/components/ExternalLink';
+
 import {
   Catchphrase,
   catchPhraseString,

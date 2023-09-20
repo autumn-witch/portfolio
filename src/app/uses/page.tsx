@@ -1,6 +1,7 @@
 import { Card } from '@/components/Card';
 import { Section } from '@/components/Section';
 import { SimpleLayout } from '@/components/SimpleLayout';
+import { ExternalLink } from '@/components/ExternalLink';
 
 function ToolsSection({
   children,
@@ -47,76 +48,100 @@ export default function Uses() {
     >
       <div className="space-y-20">
         <ToolsSection title="Workstation">
-          <Tool title="16” MacBook Pro, M1 Max, 64GB RAM (2021)">
-            I was using an Intel-based 16” MacBook Pro prior to this and the
-            difference is night and day. I’ve never heard the fans turn on a
-            single time, even under the incredibly heavy loads I put it through
-            with our various launch simulations.
+          <Tool title="Abkoncore AL300M">
+            A pretty computer tower, containing an AMD ryzen 9 CPU, 32GO of RAM,
+            and an MSI GeForce GTX 1060.
           </Tool>
-          <Tool title="Apple Pro Display XDR (Standard Glass)">
-            The only display on the market if you want something HiDPI and
-            bigger than 27”. When you’re working at planetary scale, every pixel
-            you can get counts.
+          <Tool title="Logitech MX Keys">
+            A very silent and smooth keyboard.
           </Tool>
-          <Tool title="IBM Model M SSK Industrial Keyboard">
-            They don’t make keyboards the way they used to. I buy these any time
-            I see them go up for sale and keep them in storage in case I need
-            parts or need to retire my main.
+          <Tool title="Logitech MX Anywhere 2S">
+            In addition to my MX keys, I have this mouse, which allows me to
+            easily swap context.
           </Tool>
-          <Tool title="Apple Magic Trackpad">
-            Something about all the gestures makes me feel like a wizard with
-            special powers. I really like feeling like a wizard with special
-            powers.
-          </Tool>
-          <Tool title="Herman Miller Aeron Chair">
-            If I’m going to slouch in the worst ergonomic position imaginable
-            all day, I might as well do it in an expensive chair.
+          <Tool title="16” MacBook Pro, M1, 32GB RAM (2021)">
+            After being lent a macbook by my former company, I fell in love with
+            macos and decided to buy this computer, and I wasn't disappointed. I
+            use it whenever I can't be at my desk.
           </Tool>
         </ToolsSection>
         <ToolsSection title="Development tools">
-          <Tool title="Sublime Text 4">
-            I don’t care if it’s missing all of the fancy IDE features everyone
-            else relies on, Sublime Text is still the best text editor ever
-            made.
+          <Tool title="Visual Studio Code">
+            An open source IDE with many community plugins, which is perfect for
+            JavaScript.
           </Tool>
-          <Tool title="iTerm2">
-            I’m honestly not even sure what features I get with this that aren’t
-            just part of the macOS Terminal but it’s what I use.
+          <Tool title="WSL2 in Windows Terminal / VS code console">
+            WSL2 allows me to use unix shells inside of windows.
           </Tool>
-          <Tool title="TablePlus">
-            Great software for working with databases. Has saved me from
-            building about a thousand admin interfaces for my various projects
-            over the years.
+          <Tool title="Warp">
+            When using my laptop, I use Warp as a terminal. It's pretty neat,
+            even though still young.
+          </Tool>
+          <Tool title="ZSH / OhMyZsh">
+            I definitely recommand to use this, as it offers a state-of-the-art
+            DX.
+          </Tool>
+          <Tool title="JavaScript">
+            My first love. I simply can't get rid of it.
+          </Tool>
+          <Tool title="Typescript">
+            Typescript is an amazing superset of JavaScript that, in my opinion,
+            it improves communication (and thus DX) a lot.
           </Tool>
         </ToolsSection>
-        <ToolsSection title="Design">
-          <Tool title="Figma">
-            We started using Figma as just a design tool but now it’s become our
-            virtual whiteboard for the entire company. Never would have expected
-            the collaboration features to be the real hook.
+        <ToolsSection title="Frontend">
+          <Tool title="Vue.js">
+            I have used the Vue environment a lot, and I think the DX it offers
+            is really really nice. I also used{' '}
+            <ExternalLink href="https://nuxt.com/" content="Nuxt.js" />,
+            Vuetify, Vuex, and Pinia.
+          </Tool>
+          <Tool title="React">
+            I started using React in august 2023, and pretty much instantly fell
+            in love with it. I also use Next.js and Redux. I intend to try
+            <ExternalLink
+              href="https://github.com/pmndrs/zustand"
+              content="Zustand"
+            />
+            soon.
+          </Tool>
+          <Tool title="TailwindCSS">
+            I really like this one. TailwindCSS is a tool that provides a way to
+            style your website directly from the markup. In my opinion, it fits
+            really well with component libraries like Vue and React.
+          </Tool>
+          <Tool title="TailwindUI">
+            I am awfully bad at designing stuff. And given that, Tailwind UI is
+            a blessing. Don't hesitate to check it out{' '}
+            <ExternalLink href="https://tailwindui.com" content="here" />.
+          </Tool>
+        </ToolsSection>
+        <ToolsSection title="Backend">
+          <Tool title="AdonisJS">
+            <ExternalLink href="https://adonisjs.com/" content="AdonisJS" /> is
+            a fully featured web framework for Node.js. It comes with a great
+            tooling, while leaving you in complete control. Its DX is simply
+            amazing.
+          </Tool>
+          <Tool title="PostgreSQL">
+            PostgreSQL is my go-to when I need to deal with a database.
           </Tool>
         </ToolsSection>
         <ToolsSection title="Productivity">
-          <Tool title="Alfred">
-            It’s not the newest kid on the block but it’s still the fastest. The
-            Sublime Text of the application launcher world.
-          </Tool>
-          <Tool title="Reflect">
-            Using a daily notes system instead of trying to keep things
-            organized by topics has been super powerful for me. And with
-            Reflect, it’s still easy for me to keep all of that stuff
-            discoverable by topic even though all of my writing happens in the
-            daily note.
-          </Tool>
-          <Tool title="SavvyCal">
-            Great tool for scheduling meetings while protecting my calendar and
-            making sure I still have lots of time for deep work during the week.
-          </Tool>
-          <Tool title="Focus">
-            Simple tool for blocking distracting websites when I need to just do
-            the work and get some momentum going.
+          <Tool title="ClickUp">
+            An upcoming but already very powerful tool, which allows me to
+            manage <i>everything</i>.
           </Tool>
         </ToolsSection>
+        <p>
+          I use many other tools (such as{' '}
+          <ExternalLink
+            href="https://frontendmasters.com"
+            content="Frontend Masters"
+          />
+          ) and try keeping an open eye to the incredible new tools that are
+          regularly created.
+        </p>
       </div>
     </SimpleLayout>
   );
