@@ -8,7 +8,6 @@ import { Container } from '@/components/Container';
 import { DiscordIcon, GitHubIcon } from '@/components/SocialIcons';
 
 import logoFabriq from '@/images/logos/fabriq.svg';
-import logoAirbnb from '@/images/logos/airbnb.svg';
 
 import image1 from '@/images/photos/image-1.png';
 import image2 from '@/images/photos/image-2.png';
@@ -190,13 +189,6 @@ function Resume() {
       logo: logoFabriq,
       start: '2021',
       end: '2023',
-    },
-    {
-      company: 'Les Hauts du Château',
-      title: 'Community service',
-      logo: logoAirbnb,
-      start: '2018',
-      end: '2019',
     },
   ];
 
