@@ -4,7 +4,11 @@ import Link from 'next/link';
 import clsx from 'clsx';
 
 import { Container } from '@/components/Container';
-import { GitHubIcon, DiscordIcon } from '@/components/SocialIcons';
+import {
+  DiscordIcon,
+  GitHubIcon,
+  LinkedInIcon,
+} from '@/components/SocialIcons';
 import portraitImage from '@/images/portrait.png';
 
 function SocialLink({
@@ -110,7 +114,14 @@ export default function About() {
               icon={GitHubIcon}
               className="mt-4"
             >
-              Follow me on GitHub
+              Follow on GitHub
+            </SocialLink>
+            <SocialLink
+              href="https://www.linkedin.com/in/mae-van-den-bergh-79898a123/"
+              icon={LinkedInIcon}
+              className="mt-4"
+            >
+              Connect on LinkedIn
             </SocialLink>
             <SocialLink
               href="mailto:mae.vdb@outlook.com"
