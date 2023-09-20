@@ -22,3 +22,13 @@ export const links: Array<LinkObject> = [
     name: 'Uses',
   },
 ];
+/**
+ * ? NEXT STEPS
+ * TODO REWRITE THE ABOUT SECTION
+ * TODO CHECK THE USES SECTION
+ * TODO ADD A11Y
+ * TODO ADD I18N
+ * TODO WRITE ONE OR TWO ARTICLES AND USE THEM
+ * TODO DO ONE LAST CHECK
+ * TODO DEPLOY
+ */
