@@ -211,10 +211,14 @@ function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
-        {/* TODO Add CV */}
+      <Button
+        href="#"
+        variant="secondary"
+        className="group mt-6 w-full hover:text-main-color hover:dark:text-secondary-color"
+      >
+        {/* TODO make it work */}
         Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-hover:stroke-main-color group-active:stroke-main-color dark:group-hover:stroke-secondary-color dark:group-active:stroke-secondary-color" />
       </Button>
     </div>
   );
@@ -276,14 +280,14 @@ function Photos() {
 }
 
 export default async function Home() {
-  const articles = (await getAllArticles()).slice(0, 4);
+  const articles = (await getAllArticles()).slice(0, 2);
 
   return (
     <>
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software designer, founder, and amateur astronaut.
+            Web developer, JavaScript lover, non-binary folk.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             <Catchphrase hasHeader hasInfos />
