@@ -5,9 +5,7 @@ import { Article, ArticleWithSlug } from '@/typings/articles';
 async function importArticle(
   articleFilename: string,
 ): Promise<ArticleWithSlug> {
-  const { article } = (await import(
-    `@/app/(portfolio)/articles/${articleFilename}`
-  )) as {
+  const { article } = (await import(`@/app/articles/${articleFilename}`)) as {
     default: React.ComponentType;
     article: Article;
   };
