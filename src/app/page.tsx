@@ -23,6 +23,7 @@ import { getAllArticles } from '@/modules/Portfolio/articles';
 import { ArticleWithSlug } from '@/typings/articles';
 
 import { formatDate } from '@/lib/formatDate';
+import { Photo } from '@/typings/photos';
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -150,13 +151,13 @@ interface Role {
 }
 
 function Role({ role }: { role: Role }) {
-  let startLabel =
+  const startLabel =
     typeof role.start === 'string' ? role.start : role.start.label;
-  let startDate =
+  const startDate =
     typeof role.start === 'string' ? role.start : role.start.dateTime;
 
-  let endLabel = typeof role.end === 'string' ? role.end : role.end.label;
-  let endDate = typeof role.end === 'string' ? role.end : role.end.dateTime;
+  const endLabel = typeof role.end === 'string' ? role.end : role.end.label;
+  const endDate = typeof role.end === 'string' ? role.end : role.end.dateTime;
 
   return (
     <li className="flex gap-4">
@@ -187,7 +188,7 @@ function Role({ role }: { role: Role }) {
 }
 
 function Resume() {
-  const resume: Array<Role> = [
+  const roles: Array<Role> = [
     {
       company: 'Fabriq',
       title: 'Software Engineer Apprentice',
@@ -205,7 +206,7 @@ function Resume() {
         <span className="ml-3">Work</span>
       </h2>
       <ol className="mt-6 space-y-4">
-        {resume.map((role, roleIndex) => (
+        {roles.map((role, roleIndex) => (
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
@@ -219,7 +220,29 @@ function Resume() {
 }
 
 function Photos() {
-  let rotations = [
+  const photos: Array<Photo> = [
+    {
+      src: image1,
+      alt: 'Picture of a river surrounded with trees and sand, taken from a bridge. A small boat is floating on it.',
+    },
+    {
+      src: image2,
+      alt: "Picture of my shadow on a sunny day, I'm carrying a totebag and run my hand through my hair.",
+    },
+    {
+      src: image3,
+      alt: 'Picture of myself wearing a black short and a white t-shirt, walking into the sea, knee-deep in water',
+    },
+    {
+      src: image4,
+      alt: 'Picture of a hill filled with trees, on top of which stands a red moon.',
+    },
+    {
+      src: image5,
+      alt: 'Picture of Scottie, a young black cat, laying in a white cat cushion, looking at the camera.',
+    },
+  ];
+  const rotations = [
     'rotate-2',
     '-rotate-2',
     'rotate-2',
@@ -230,17 +253,17 @@ function Photos() {
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+        {photos.map((photo, photoIndex) => (
           <div
-            key={image.src}
+            key={photo.src.src}
             className={clsx(
               'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
-              rotations[imageIndex % rotations.length],
+              rotations[photoIndex % rotations.length],
             )}
           >
             <Image
-              src={image}
-              alt=""
+              src={photo.src}
+              alt={photo.alt}
               sizes="(min-width: 640px) 18rem, 11rem"
               className="absolute inset-0 h-full w-full object-cover"
             />
