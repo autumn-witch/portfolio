@@ -1,7 +1,7 @@
-import { Card } from '@/components/Card';
-import { Section } from '@/components/Section';
-import { SimpleLayout } from '@/components/SimpleLayout';
-import { ExternalLink } from '@/components/ExternalLink';
+import { Card } from '@/BaseComponents/Card';
+import { Section } from '@/BaseComponents/Section';
+import { SimpleLayout } from '@/BaseComponents/SimpleLayout';
+import { ExternalLink } from '@/BaseComponents/ExternalLink';
 
 function ToolsSection({
   children,

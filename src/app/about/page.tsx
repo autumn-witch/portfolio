@@ -3,18 +3,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
 
-import { Container } from '@/components/Container';
-import {
-  DiscordIcon,
-  GitHubIcon,
-  LinkedInIcon,
-} from '@/components/SocialIcons';
-import { ExternalLink } from '@/components/ExternalLink';
+import { Container } from '@/BaseComponents/Container';
 
-import {
-  Catchphrase,
-  catchPhraseString,
-} from '@/modules/Portfolio/Catchphrase';
+import { SocialLink } from '@/BaseComponents/SocialLink';
+import { SimpleMailIcon as MailIcon } from '@/BaseComponents/Icons/MailIcon';
+import { DiscordIcon } from '@/BaseComponents/Icons/DiscordIcon';
+import { GitHubIcon } from '@/BaseComponents/Icons/GitHubIcon';
+import { LinkedInIcon } from '@/BaseComponents/Icons/LinkedInIcon';
+import { ExternalLink } from '@/BaseComponents/ExternalLink';
+import { Catchphrase } from '@/BaseComponents/Catchphrase';
+
+import { catchPhraseString } from '@/lib/misc';
 
 import portraitImage from '@/images/portrait.png';
 
@@ -23,42 +22,8 @@ export const metadata: Metadata = {
   description: catchPhraseString,
 };
 
-function SocialLink({
-  className,
-  href,
-  children,
-  icon: Icon,
-}: {
-  className?: string;
-  href: string;
-  icon: React.ComponentType<{ className?: string }>;
-  children: React.ReactNode;
-}) {
-  return (
-    <li className={clsx(className, 'flex')}>
-      <Link
-        href={href}
-        className="group flex text-sm font-medium text-zinc-800 transition hover:text-main-color dark:text-zinc-200 dark:hover:text-secondary-color"
-      >
-        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-main-color group-hover:dark:fill-secondary-color" />
-        <span className="ml-4">{children}</span>
-      </Link>
-    </li>
-  );
-}
-
-function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"
-      />
-    </svg>
-  );
-}
-
 export default function About() {
+  // TODO add alt text to the image
   return (
     <Container className="mt-16 sm:mt-32">
       <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">

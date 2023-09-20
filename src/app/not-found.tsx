@@ -1,5 +1,5 @@
-import { Button } from '@/components/Button';
-import { Container } from '@/components/Container';
+import { Button } from '@/BaseComponents/BaseButton';
+import { Container } from '@/BaseComponents/Container';
 
 export default function NotFound() {
   return (
