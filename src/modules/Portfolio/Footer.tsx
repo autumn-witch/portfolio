@@ -11,6 +11,7 @@ function NavLink({
   href: string;
   children: React.ReactNode;
 }) {
+  // TODO should be accessible through keyboard navigation
   return (
     <Link href={href} className="transition hover:text-secondary-color">
       {children}

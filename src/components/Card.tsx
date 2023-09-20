@@ -33,6 +33,7 @@ export function Card<T extends React.ElementType = 'div'>({
   );
 }
 
+// TODO should be accessible through keyboard navigation
 Card.Link = function CardLink({
   children,
   ...props

@@ -104,6 +104,7 @@ function SocialLink({
 }: React.ComponentPropsWithoutRef<typeof Link> & {
   icon: React.ComponentType<{ className?: string }>;
 }) {
+  // todo should be accessible through keyboard navigation
   return (
     <Link className="group -m-1 p-1" {...props}>
       <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-main-color group-hover:dark:fill-secondary-color" />
@@ -196,6 +197,7 @@ function Resume() {
     },
   ];
 
+  // TODO should be accessible through keyboard navigation
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">

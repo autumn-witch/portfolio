@@ -1,6 +1,6 @@
 'use client';
 
-import { Fragment, useEffect, useRef, useState } from 'react';
+import { Fragment, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -127,7 +127,7 @@ function NavItem({
   children: React.ReactNode;
 }) {
   let isActive = usePathname() === href;
-
+  // todo should be accessible through keyboard navigation
   return (
     <li>
       <Link
