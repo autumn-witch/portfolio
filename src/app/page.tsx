@@ -24,6 +24,7 @@ import { ArticleWithSlug } from '@/typings/articles';
 
 import { formatDate } from '@/lib/formatDate';
 import { Photo } from '@/typings/photos';
+import { Catchphrase } from '@/modules/Portfolio/Catchphrase';
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -285,10 +286,7 @@ export default async function Home() {
             Software designer, founder, and amateur astronaut.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Mae, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            <Catchphrase hasHeader hasInfos />
           </p>
           <ul role="list" className="mt-6 flex gap-6">
             <SocialLink
