@@ -11,7 +11,6 @@ import { ComplexMailIcon as MailIcon } from '@/BaseComponents/Icons/MailIcon';
 
 import { DiscordIcon } from '@/BaseComponents/Icons/DiscordIcon';
 import { GitHubIcon } from '@/BaseComponents/Icons/GitHubIcon';
-import { LinkedInIcon } from '@/BaseComponents/Icons/LinkedInIcon';
 
 import logoFabriq from '@/images/logos/fabriq.svg';
 
@@ -223,11 +222,6 @@ export default async function Home() {
               href="https://github.com/maevdb"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
-            />
-            <SocialLink
-              href="https://www.linkedin.com/in/mae-van-den-bergh-79898a123/"
-              aria-label="Connect on LinkedIn"
-              icon={LinkedInIcon}
             />
           </ul>
         </div>

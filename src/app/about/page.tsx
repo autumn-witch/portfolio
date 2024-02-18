@@ -9,7 +9,6 @@ import { SocialLink } from '@/BaseComponents/SocialLink';
 import { SimpleMailIcon as MailIcon } from '@/BaseComponents/Icons/MailIcon';
 import { DiscordIcon } from '@/BaseComponents/Icons/DiscordIcon';
 import { GitHubIcon } from '@/BaseComponents/Icons/GitHubIcon';
-import { LinkedInIcon } from '@/BaseComponents/Icons/LinkedInIcon';
 import { ExternalLink } from '@/BaseComponents/ExternalLink';
 import { Catchphrase } from '@/BaseComponents/Catchphrase';
 
@@ -43,9 +42,9 @@ export default function About() {
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              From the youngest age, I've been a very curious and persevering
-              individual. Once something caught my interest, I'd see it as a
-              puzzle and I would go to great lengths to solve it.
+              I've been a (very) curious and persevering individual for as long
+              as I can remember. Once something caught my interest, I'd go to
+              great lengths to solve it.
             </p>
             <p>
               At the age of 14, I injured myself pretty badly. That led me to
@@ -88,13 +87,6 @@ export default function About() {
               className="mt-4"
             >
               Follow on GitHub
-            </SocialLink>
-            <SocialLink
-              href="https://www.linkedin.com/in/mae-van-den-bergh-79898a123/"
-              icon={LinkedInIcon}
-              className="mt-4"
-            >
-              Connect on LinkedIn
             </SocialLink>
             <SocialLink
               href="mailto:mae.vdb@outlook.com"
