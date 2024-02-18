@@ -7,7 +7,6 @@ import { Container } from '@/BaseComponents/Container';
 
 import { SocialLink } from '@/BaseComponents/SocialLink';
 import { SimpleMailIcon as MailIcon } from '@/BaseComponents/Icons/MailIcon';
-import { DiscordIcon } from '@/BaseComponents/Icons/DiscordIcon';
 import { GitHubIcon } from '@/BaseComponents/Icons/GitHubIcon';
 import { ExternalLink } from '@/BaseComponents/ExternalLink';
 import { Catchphrase } from '@/BaseComponents/Catchphrase';
@@ -74,13 +73,6 @@ export default function About() {
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink
-              href="https://discord.com/users/163744967049609216"
-              icon={DiscordIcon}
-              className="mt-4"
-            >
-              Add me on Discord
-            </SocialLink>
             <SocialLink
               href="https://github.com/maevdb/"
               icon={GitHubIcon}

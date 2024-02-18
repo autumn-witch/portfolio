@@ -9,7 +9,6 @@ import { BriefcaseIcon } from '@/BaseComponents/Icons/BriefcaseIcon';
 import { ArrowDownIcon } from '@/BaseComponents/Icons/ArrowDownIcon';
 import { ComplexMailIcon as MailIcon } from '@/BaseComponents/Icons/MailIcon';
 
-import { DiscordIcon } from '@/BaseComponents/Icons/DiscordIcon';
 import { GitHubIcon } from '@/BaseComponents/Icons/GitHubIcon';
 
 import logoFabriq from '@/images/logos/fabriq.svg';
@@ -213,11 +212,6 @@ export default async function Home() {
           </h1>
           <Catchphrase className="mt-6" hasHeader hasInfos />
           <ul role="list" className="mt-6 flex gap-6">
-            <SocialLink
-              href="https://discord.com/users/163744967049609216"
-              aria-label="Add me on Discord"
-              icon={DiscordIcon}
-            />
             <SocialLink
               href="https://github.com/maevdb"
               aria-label="Follow on GitHub"
