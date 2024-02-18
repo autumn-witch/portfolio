@@ -11,12 +11,10 @@ import { links } from '@/lib/misc';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Mae van den Bergh',
-    default:
-      'Mae van den Bergh - Software designer, founder, and amateur astronaut',
+    template: '%s - Mae',
+    default: "Mae's blog - Mae",
   },
-  description:
-    'I’m Mae, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms.',
+  description: `I'm Mae, a self-taught developer, passionate about the web.`,
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
