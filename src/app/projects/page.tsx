@@ -24,8 +24,8 @@ const projects = [
   {
     name: 'Notes en Bulle',
     description:
-      'Free privacy-first story writing application with a social network aspect. For introverts, by introverts.',
-    link: { href: 'https://notes-en-bulle.io', label: 'Website' },
+      'Free privacy-first story writing application with a social network aspect. For introverts, by an introvert.',
+    link: { href: 'https://notes-en-bulle.com', label: 'Website' },
     logo: logoNotesEnBulle,
   },
 ];
