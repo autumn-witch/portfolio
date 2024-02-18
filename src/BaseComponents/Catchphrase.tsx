@@ -12,8 +12,8 @@ export function Catchphrase({
     <section {...props}>
       {hasHeader && (
         <div>
-          Hello! I'm <ColoredText content="Mae" />, a self-taught web developer
-          who <em className="italic">loves</em> JavaScript.
+          Hello! I'm <ColoredText content="Mae" />, a french self-taught web
+          developer who <em className="italic">loves</em> JavaScript.
         </div>
       )}
       {hasInfos && (
