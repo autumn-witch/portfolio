@@ -1,6 +1,6 @@
 import glob from 'fast-glob';
 
-import { Article, ArticleWithSlug } from '@/typings/articles';
+import { Article, ArticleWithSlug } from '@/modules/articles/types';
 
 async function importArticle(
   articleFilename: string,
