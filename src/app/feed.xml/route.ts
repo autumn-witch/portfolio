@@ -22,7 +22,7 @@ export async function GET(req: Request) {
     link: siteUrl,
     image: `${siteUrl}/favicon.ico`,
     favicon: `${siteUrl}/favicon.ico`,
-    copyright: `ACABATATRA ${new Date().getFullYear()}`,
+    copyright: `ABRACACABRA ${new Date().getFullYear()}`,
     feedLinks: {
       rss2: `${siteUrl}/feed.xml`,
     },
