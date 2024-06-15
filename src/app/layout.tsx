@@ -15,11 +15,6 @@ export const metadata: Metadata = {
     default: 'Blog - Autumn Witch',
   },
   description: ``,
-  alternates: {
-    types: {
-      'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
-    },
-  },
 };
 
 export default function RootLayout({
