@@ -11,10 +11,10 @@ import { links } from '@/lib/misc';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Mae',
-    default: "Mae's blog - Mae",
+    template: '%s - Autumn Witch',
+    default: 'Blog - Autumn Witch',
   },
-  description: `I'm Mae, a self-taught developer, passionate about the web.`,
+  description: ``,
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,

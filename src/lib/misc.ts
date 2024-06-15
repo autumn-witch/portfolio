@@ -3,19 +3,15 @@ import { LinkObject } from '@/types/links';
 export const links: Array<LinkObject> = [
   {
     path: '/',
-    name: 'Home',
+    name: 'Accueil',
   },
   {
     path: '/about',
-    name: 'About',
+    name: 'À propos',
   },
   {
     path: '/articles',
     name: 'Articles',
-  },
-  {
-    path: '/projects',
-    name: 'Projects',
   },
 ];
 
@@ -25,11 +21,7 @@ export function clamp(number: number, a: number, b: number) {
   return Math.min(Math.max(number, min), max);
 }
 
-export const catchPhraseString = `Hello! I'm Mae, a non-binary self-taught web developer who loves JavaScript.
-	I strongly believe in a human and accessible web.
-	On my free time, aside from writing web applications, I love to read,
-	I'm a LGBTQIA+ activist, and lately I've been trying to learn how to
-	cook as well as play piano.`;
+export const catchPhraseString = `Front populaire le 30. Et organisons-nous pour la suite.`;
 
 /**
  * ! NEXT STEPS
@@ -45,4 +37,5 @@ export const catchPhraseString = `Hello! I'm Mae, a non-binary self-taught web d
  * TODO DO ONE LAST CHECK
  * TODO DEPLOY
  * ? SHARE THE URL?
+ * TODO CHANGE UI
  */

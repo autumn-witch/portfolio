@@ -16,7 +16,7 @@ import { catchPhraseString } from '@/lib/misc';
 import portraitImage from '@/images/portrait.png';
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: 'À propos',
   description: catchPhraseString,
 };
 
@@ -40,54 +40,19 @@ export default function About() {
             <Catchphrase hasHeader />
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
-            <p>
-              I've been a (very) curious and persevering individual for as long
-              as I can remember. Once something caught my interest, I'd go to
-              great lengths to solve it.
-            </p>
-            <p>
-              At the age of 14, I injured myself pretty badly. That led me to
-              spend a lot of time behind our family computer, discovering the
-              web with an insatiable curiosity.
-            </p>
-            <p>
-              I spent the next two years becoming versed in the amazing world of
-              computers, and ended up discovering programming. This was such an
-              eye-opening experience that I enrolled to a computer high school
-              course.
-            </p>
-            <p>
-              I spent the following years figuring out one of life's hardest
-              problems: understanding myself. At the age of 25, I finally found
-              the answer: I am a non-binary folk who simply <em>loves</em>{' '}
-              solving puzzles, no matter their shape. I also take
-            </p>
-            <p>
-              This led to finding an internship at{' '}
-              <ExternalLink href="https://en.fabriq.tech/" content="Fabriq" />,
-              during which I learned a lot of how it all works. I currently am
-              preparing some amazing stuff (such as <em>Notes en Bulle</em>), so
-              stay tuned!
-            </p>
+            <p>Action directe.</p>
           </div>
         </div>
         <div className="lg:pl-20">
-          <ul role="list">
+          {/* <ul role="list">
             <SocialLink
-              href="https://github.com/maevdb/"
-              icon={GitHubIcon}
-              className="mt-4"
-            >
-              Follow on GitHub
-            </SocialLink>
-            <SocialLink
-              href="mailto:mae.vdb@outlook.com"
+              href="mailto:contact@autumnwit.ch"
               icon={MailIcon}
               className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
-              mae.vdb@outlook.com
+              contact@autumnwit.ch
             </SocialLink>
-          </ul>
+          </ul> */}
         </div>
       </div>
     </Container>

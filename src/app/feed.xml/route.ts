@@ -10,8 +10,8 @@ export async function GET(req: Request) {
   }
 
   const author = {
-    name: 'Mae van den Bergh',
-    email: 'mae.vdb@outlook.com',
+    name: 'Autumn Witch',
+    email: 'contact@autumnwit.ch',
   };
 
   const feed = new Feed({
@@ -22,7 +22,7 @@ export async function GET(req: Request) {
     link: siteUrl,
     image: `${siteUrl}/favicon.ico`,
     favicon: `${siteUrl}/favicon.ico`,
-    copyright: `All rights reserved ${new Date().getFullYear()}`,
+    copyright: `ACABATATRA ${new Date().getFullYear()}`,
     feedLinks: {
       rss2: `${siteUrl}/feed.xml`,
     },

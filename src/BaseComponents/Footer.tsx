@@ -34,8 +34,7 @@ export function Footer() {
                 ))}
               </div>
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                &copy; {new Date().getFullYear()} Mae van den Bergh. All rights
-                reserved.
+                &copy; {new Date().getFullYear()} Autumn Witch. ACABATATRA
               </p>
             </div>
           </ContainerInner>
