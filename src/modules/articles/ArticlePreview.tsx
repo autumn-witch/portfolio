@@ -16,7 +16,7 @@ export function ArticleVerticalPreview({
         {formatDate(article.date)}
       </Card.Eyebrow>
       <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Lire l'article</Card.Cta>
+      <Card.Cta>Lire l&apos;article</Card.Cta>
     </Card>
   );
 }
@@ -41,7 +41,7 @@ export function ArticleHorizontalPreview({
           {formatDate(article.date)}
         </Card.Eyebrow>
         <Card.Description>{article.description}</Card.Description>
-        <Card.Cta>Lire l'article</Card.Cta>
+        <Card.Cta>Lire l&apos;article</Card.Cta>
       </Card>
       <Card.Eyebrow
         as="time"
