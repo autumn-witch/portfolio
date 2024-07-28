@@ -23,7 +23,7 @@ export async function GET(req: Request) {
     favicon: `${siteUrl}/favicon.ico`,
     copyright: `Autumn Witch${new Date().getFullYear()}`,
     feedLinks: {
-      rss2Articles: `${siteUrl}/articles-feed.rss`,
+      rss2: `${siteUrl}/articles-feed.rss`,
     },
   });
 
@@ -59,7 +59,7 @@ export async function GET(req: Request) {
     });
   }
 
-  return new Response(feed.rss2Articles(), {
+  return new Response(feed.rss2(), {
     status: 200,
     headers: {
       'content-type': 'application/xml',
