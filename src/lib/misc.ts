@@ -21,12 +21,10 @@ export function clamp(number: number, a: number, b: number) {
   return Math.min(Math.max(number, min), max);
 }
 
-export const catchPhraseString = `Front populaire le 30. Et organisons-nous pour la suite.`;
+export const catchPhraseString = `Agit lentement, soigne les choses.`;
 
 /**
  * ! NEXT STEPS
- * TODO REWRITE THE ABOUT SECTION
- * TODO CHECK THE USES SECTION
  * TODO FIX A11Y CURRENT PROBLEMS
  * TODO FIX DARK THEME AUTO-SET
  * TODO CHECK IF THERE ARE OTHERS A11Y ISSUES; IF SO, FIX THEM
@@ -34,8 +32,6 @@ export const catchPhraseString = `Front populaire le 30. Et organisons-nous pour
  * TODO WRITE ONE OR TWO ARTICLES AND USE THEM
  * TODO FOLLOW SEO COURSES AND USE THE KNOWLEDGE IN THE APP
  * TODO UPDATE THE README FILE
+ * TODO UPDATE THE ROBOTS.TXT TO AVOID SCRAPPING
  * TODO DO ONE LAST CHECK
- * TODO DEPLOY
- * ? SHARE THE URL?
- * TODO CHANGE UI
  */
