@@ -10,7 +10,7 @@ export function Catchphrase({
 }) {
   return (
     <section {...props}>
-      {hasHeader && <div>Sorcière d&apos;z`automne.</div>}
+      {hasHeader && <div>Sorcière d&apos;automne.</div>}
       {hasInfos && <div>{catchPhraseString}</div>}
     </section>
   );
