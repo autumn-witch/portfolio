@@ -6,7 +6,7 @@ export async function GET(req: Request) {
   const siteUrl = process.env.PUBLIC_SITE_URL;
 
   if (!siteUrl) {
-    throw Error('Missing NEXT_PUBLIC_SITE_URL environment variable');
+    throw Error('Missing PUBLIC_SITE_URL environment variable');
   }
 
   const author = {
@@ -23,7 +23,7 @@ export async function GET(req: Request) {
     favicon: `${siteUrl}/favicon.ico`,
     copyright: `Autumn Witch${new Date().getFullYear()}`,
     feedLinks: {
-      rss2: `${siteUrl}/articles-feed.rss`,
+      rss2: `${siteUrl}/feed.xml`,
     },
   });
 
