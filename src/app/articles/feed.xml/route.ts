@@ -23,12 +23,12 @@ export async function GET(req: Request) {
     favicon: `${siteUrl}/favicon.ico`,
     copyright: `Autumn Witch${new Date().getFullYear()}`,
     feedLinks: {
-      rss2: `${siteUrl}/feed.xml`,
+      rss2: `${siteUrl}/articles/feed.xml`,
     },
   });
 
   const articleIds = require
-    .context('../articles', true, /\/page\.mdx$/)
+    .context('../', true, /\/page\.mdx$/)
     .keys()
     .filter((key) => key.startsWith('./'))
     .map((key) => key.slice(2).replace(/\/page\.mdx$/, ''));
