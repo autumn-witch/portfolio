@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: ``,
   alternates: {
     types: {
-      'application/rss+xml': `${process.env.PUBLIC_SITE_URL}/feed.rss`,
+      'application/rss+xml': `${process.env.PUBLIC_SITE_URL}/feed.xml`,
     },
   },
 };
