@@ -1,5 +1,7 @@
 /** @type {import('prettier').Options} */
-export const singleQuote = true;
-export const semi = true;
-export const tabWidth = 2;
-export const plugins = ['prettier-plugin-tailwindcss'];
+module.exports = {
+  singleQuote: true,
+  semi: true,
+  tabWidth: 2,
+  plugins: ['prettier-plugin-tailwindcss'],
+};
