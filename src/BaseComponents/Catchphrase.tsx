@@ -1,4 +1,4 @@
-import { ColoredText } from '@/BaseComponents/ColoredText';
+import { catchPhraseString } from '@/lib/misc';
 
 export function Catchphrase({
   hasHeader = false,
@@ -10,8 +10,8 @@ export function Catchphrase({
 }) {
   return (
     <section {...props}>
-      {hasHeader && <div>Front populaire le 30.</div>}
-      {hasInfos && <div>Et organisons-nous pour la suite.</div>}
+      {hasHeader && <div>Sorcière d&apos;z`automne.</div>}
+      {hasInfos && <div>{catchPhraseString}</div>}
     </section>
   );
 }
