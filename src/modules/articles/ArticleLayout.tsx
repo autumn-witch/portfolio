@@ -7,9 +7,9 @@ import { AppContext } from '@/app/providers';
 
 import { Container } from '@/BaseComponents/Container';
 import { Prose } from '@/BaseComponents/Prose';
-import { ArrowLeftIcon } from '../../BaseComponents/Icons/ArrowLeftIcon';
+import { ArrowLeftIcon } from '@/BaseComponents/Icons/ArrowLeftIcon';
 
-import { ArticleWithSlug } from '@/modules/articles/types';
+import { type ArticleWithSlug } from '@/modules/articles/types';
 
 import { formatDate } from '@/lib/formatDate';
 

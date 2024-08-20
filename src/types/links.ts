@@ -5,6 +5,11 @@ export type LinkObject = {
   name: string;
 };
 
+export type LinkProps = {
+  href: string;
+  content: string;
+}
+
 export interface ExtendedLinkObject extends LinkObject {
   isProtected: boolean;
   logo: ImageProps['src'];
