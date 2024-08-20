@@ -1,8 +1,9 @@
 export type Article = {
-  title: string;
-  description: string;
   author: string;
   date: string;
+  title: string;
+  contentWarnings?: string;
+  description: string;
 };
 
 type Slug = {

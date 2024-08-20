@@ -12,10 +12,17 @@ export function ArticleVerticalPreview({
       <Card.Title href={`/articles/${article.slug}`}>
         {article.title}
       </Card.Title>
-      <Card.Eyebrow as="time" dateTime={article.date} decorate>
-        {formatDate(article.date)}
+      <Card.Eyebrow as="section" decorate>
+        <time dateTime={article.date}>{formatDate(article.date)}</time>.
       </Card.Eyebrow>
-      <Card.Description>{article.description}</Card.Description>
+      <Card.Description>
+        {article.contentWarnings !== undefined && (
+          <span className="-mt-2 text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+            Content warnings: {article.contentWarnings}
+          </span>
+        )}
+        <span className="mt-2 block">{article.description}</span>
+      </Card.Description>
       <Card.Cta>Lire l&apos;article</Card.Cta>
     </Card>
   );
@@ -32,23 +39,21 @@ export function ArticleHorizontalPreview({
         <Card.Title href={`/articles/${article.slug}`}>
           {article.title}
         </Card.Title>
-        <Card.Eyebrow
-          as="time"
-          dateTime={article.date}
-          className="md:hidden"
-          decorate
-        >
-          {formatDate(article.date)}
+        <Card.Eyebrow as="section" className="md:hidden" decorate>
+          <time dateTime={article.date}>{formatDate(article.date)}</time>.
         </Card.Eyebrow>
-        <Card.Description>{article.description}</Card.Description>
+        <Card.Description>
+          {article.contentWarnings !== undefined && (
+            <span className="-mt-2 text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+              Content warnings: {article.contentWarnings}
+            </span>
+          )}
+          <span className="mt-2 block">{article.description}</span>
+        </Card.Description>
         <Card.Cta>Lire l&apos;article</Card.Cta>
       </Card>
-      <Card.Eyebrow
-        as="time"
-        dateTime={article.date}
-        className="mt-1 hidden md:block"
-      >
-        {formatDate(article.date)}
+      <Card.Eyebrow as="section" className="mt-1 hidden md:block">
+        <time dateTime={article.date}>{formatDate(article.date)}</time>
       </Card.Eyebrow>
     </article>
   );

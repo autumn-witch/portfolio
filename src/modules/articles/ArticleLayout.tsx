@@ -49,6 +49,11 @@ export function ArticleLayout({
                 <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
                 <span className="ml-3">{formatDate(article.date)}</span>
               </time>
+              {article.contentWarnings !== undefined && (
+                <h2 className="mt-4 text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+                  Content warnings: {article.contentWarnings}
+                </h2>
+              )}
             </header>
             <Prose className="mt-8" data-mdx-content>
               {children}
