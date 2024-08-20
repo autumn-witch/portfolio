@@ -42,15 +42,13 @@ export async function GET(req: Request) {
     const article = $('article').first();
     const title = article.find('h1').first().text();
     const date = article.find('time').first().attr('datetime');
-    const contentWarnings = article.find('h2').first().text();
+    const description = article.find('h2').first().text();
     const content = article.find('[data-mdx-content]').first().html();
 
     assert(typeof title === 'string');
     assert(typeof date === 'string');
-    assert(typeof contentWarnings === 'string');
+    assert(typeof description === 'string');
     assert(typeof content === 'string');
-
-    const description = `content warnings: ${contentWarnings}`;
 
     feed.addItem({
       title,
