@@ -15,13 +15,13 @@ export async function GET(req: Request) {
 
   const feed = new Feed({
     title: author.name,
-    description: "Autumn witch's blog",
-    author,
+    description: "Autumn witch's articles",
+    ...author,
     id: siteUrl,
     link: siteUrl,
     image: `${siteUrl}/favicon.ico`,
     favicon: `${siteUrl}/favicon.ico`,
-    copyright: `Autumn Witch${new Date().getFullYear()}`,
+    copyright: `Autumn Witch - ${new Date().getFullYear()}`,
     feedLinks: {
       rss2: `${siteUrl}/articles/feed.xml`,
     },
@@ -42,20 +42,26 @@ export async function GET(req: Request) {
     const article = $('article').first();
     const title = article.find('h1').first().text();
     const date = article.find('time').first().attr('datetime');
+    const contentWarnings = article.find('h2').first().text();
     const content = article.find('[data-mdx-content]').first().html();
 
     assert(typeof title === 'string');
     assert(typeof date === 'string');
+    assert(typeof contentWarnings === 'string');
     assert(typeof content === 'string');
+
+    const description = `content warnings: ${contentWarnings}`;
 
     feed.addItem({
       title,
       id: publicUrl,
       link: publicUrl,
+      date: new Date(date),
+      description,
       content,
       author: [author],
       contributor: [author],
-      date: new Date(date),
+      published: new Date(date),
     });
   }
 
