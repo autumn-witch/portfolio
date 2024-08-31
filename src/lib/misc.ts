@@ -21,7 +21,7 @@ export function clamp(number: number, a: number, b: number) {
   return Math.min(Math.max(number, min), max);
 }
 
-export const catchPhraseString = `Agit lentement, soigne les choses.`;
+export const catchPhraseString = `Vis et écris lentement.\nCafés, plaids et chats.`;
 
 /**
  * ! NEXT STEPS
