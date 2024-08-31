@@ -2,29 +2,30 @@ import Image from 'next/image';
 
 import avatar from '@/images/avatar.png';
 
-import { ArticleLayout } from '@/modules/articles/ArticleLayout';
+import { EntryLayout } from '@/modules/journal/EntryLayout';
 
-export const article = {
+export const entry = {
   author: 'Autumn Witch',
   date: '2024-06-15',
   title: 'Système scolaire',
-  contentWarnings: 'violences scolaires, marginalisations, rejet de l\'autre, capitalisme',
+  contentWarnings:
+    "violences scolaires, marginalisations, rejet de l'autre, capitalisme",
   description: 'Pavé maladroit et spontané sur le système scolaire.',
 };
 
 export const metadata = {
-  author: article.author,
-  date: article.date,
-  title: article.title,
-  contentWarnings: article.contentWarnings,
-  description: article.description,
+  author: entry.author,
+  date: entry.date,
+  title: entry.title,
+  contentWarnings: entry.contentWarnings,
+  description: entry.description,
 };
 
-export default (props) => <ArticleLayout article={article} {...props} />;
+export default (props) => <EntryLayout entry={entry} {...props} />;
 
-Cet article est un copié-collé d'une discussion sur le système scolaire. Il est donc potentiellement maladroit, et pas sourcé.
+Cette entrée est un copié-collé d'une discussion sur le système scolaire. Il est donc potentiellement maladroit, et pas sourcé.
 Il est l'expression d'un ressenti, notamment vis-à-vis de mon vécu, et non une analyse strictement objective.
-Il est également sujet à modification(s), une fois que j'aurai mis en place un système de traçabilité des modifications qui les rendront __transparentes__.
+Il est également sujet à modification(s), une fois que j'aurai mis en place un système de traçabilité des modifications qui les rendront **transparentes**.
 
 La france a des années de retard au niveau recherches scientifiques sur le plan neurologique.
 Je ne sais pas du tout où se situe l'opinion publique française par rapport à d'autres pays.

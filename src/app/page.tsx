@@ -10,8 +10,8 @@ import image3 from '@/images/photos/image-3.png';
 import image4 from '@/images/photos/image-4.png';
 import image5 from '@/images/photos/image-5.png';
 
-import { ArticleVerticalPreview } from '@/modules/articles/ArticlePreview';
-import { getAllArticles } from '@/modules/articles/articles';
+import { getAllEntries } from '@/modules/journal/entries';
+import { EntryVerticalPreview } from '@/modules/journal/EntryPreview';
 
 import { type Photo } from '@/types/photos';
 
@@ -76,14 +76,14 @@ function Photos() {
   );
 }
 
-async function Articles() {
-  const articles = (await getAllArticles()).slice(0, 2);
+async function Entries() {
+  const entries = (await getAllEntries()).slice(0, 2);
   return (
     <Container className="mt-24 md:mt-28">
       <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
         <div className="flex flex-col gap-16">
-          {articles.map((article) => (
-            <ArticleVerticalPreview key={article.slug} article={article} />
+          {entries.map((entry) => (
+            <EntryVerticalPreview key={entry.slug} entry={entry} />
           ))}
         </div>
       </div>
@@ -98,7 +98,7 @@ export default async function Home() {
         <Catchphrase className="mt-9 max-w-2xl" hasHeader hasInfos />
       </Container>
       <Photos />
-      <Articles />
+      <Entries />
     </>
   );
 }

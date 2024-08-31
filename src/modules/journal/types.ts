@@ -1,4 +1,4 @@
-export type Article = {
+export type Entry = {
   author: string;
   date: string;
   title: string;
@@ -10,4 +10,4 @@ type Slug = {
   slug: string;
 };
 
-export type ArticleWithSlug = Article & Slug;
+export type EntryWithSlug = Entry & Slug;

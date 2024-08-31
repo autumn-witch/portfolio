@@ -15,7 +15,7 @@ export async function GET(req: Request) {
 
   const feed = new Feed({
     title: author.name,
-    description: "Autumn witch's articles",
+    description: "Autumn witch's journal",
     ...author,
     id: siteUrl,
     link: siteUrl,
@@ -23,27 +23,27 @@ export async function GET(req: Request) {
     favicon: `${siteUrl}/favicon.ico`,
     copyright: `Autumn Witch - ${new Date().getFullYear()}`,
     feedLinks: {
-      rss2: `${siteUrl}/articles/feed.xml`,
+      rss2: `${siteUrl}/journal/feed.xml`,
     },
   });
 
-  const articleIds = require
+  const entryIds = require
     .context('../', true, /\/page\.mdx$/)
     .keys()
     .filter((key) => key.startsWith('./'))
     .map((key) => key.slice(2).replace(/\/page\.mdx$/, ''));
 
-  for (const id of articleIds) {
-    const url = String(new URL(`/articles/${id}`, req.url));
+  for (const id of entryIds) {
+    const url = String(new URL(`/journal/${id}`, req.url));
     const html = await (await fetch(url)).text();
     const $ = cheerio.load(html);
 
-    const publicUrl = `${siteUrl}/articles/${id}`;
-    const article = $('article').first();
-    const title = article.find('h1').first().text();
-    const date = article.find('time').first().attr('datetime');
-    const description = article.find('h2').first().text();
-    const content = article.find('[data-mdx-content]').first().html();
+    const publicUrl = `${siteUrl}/journal/${id}`;
+    const entry = $('entry').first();
+    const title = entry.find('h1').first().text();
+    const date = entry.find('time').first().attr('datetime');
+    const description = entry.find('h2').first().text();
+    const content = entry.find('[data-mdx-content]').first().html();
 
     assert(typeof title === 'string');
     assert(typeof date === 'string');
