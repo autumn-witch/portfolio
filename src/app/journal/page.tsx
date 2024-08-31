@@ -19,7 +19,7 @@ function Intro() {
   const url = `${baseUrl}/journal/feed.xml`;
   return (
     <>
-      <span>Mon journal. </span>
+      <span>Toutes les entrées. </span>
       <WebLink href={url} content="Flux RSS" />
     </>
   );
@@ -28,7 +28,7 @@ function Intro() {
 export default async function EntriesIndex() {
   const entries = await getAllEntries();
   return (
-    <SimpleLayout title="Entrées" intro={Intro()}>
+    <SimpleLayout title="Journal" intro={Intro()}>
       <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
         <div className="flex max-w-3xl flex-col space-y-16">
           {entries.map((entry) => (
