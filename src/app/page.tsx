@@ -95,12 +95,7 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-9">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            <Catchphrase hasHeader />
-          </h1>
-          <Catchphrase className="mt-6" hasInfos />
-        </div>
+        <Catchphrase className="mt-9 max-w-2xl" hasHeader hasInfos />
       </Container>
       <Photos />
       <Articles />
