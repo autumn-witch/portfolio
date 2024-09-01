@@ -39,7 +39,7 @@ export async function GET(req: Request) {
     const $ = cheerio.load(html);
 
     const publicUrl = `${siteUrl}/journal/${id}`;
-    const entry = $('entry').first();
+    const entry = $('article').first();
     const title = entry.find('h1').first().text();
     const date = entry.find('time').first().attr('datetime');
     const description = entry.find('h2').first().text();
