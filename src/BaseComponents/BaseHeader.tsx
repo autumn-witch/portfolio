@@ -43,7 +43,7 @@ function MobileNavigation({
 }) {
   return (
     <Popover className={className}>
-      <Popover.Button className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
+      <Popover.Button className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20">
         Menu
         <ChevronDownIcon className="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400" />
       </Popover.Button>
@@ -110,14 +110,12 @@ function NavItem({
       <Link
         href={href}
         className={clsx(
-          'relative block px-3 py-2 transition',
-          isActive ? 'text-secondary-color' : 'hover:text-secondary-color',
+          'hover:text-active relative block px-3 py-2 transition',
+          isActive ? 'text-secondary-color' : '',
         )}
       >
         {children}
-        {isActive && (
-          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-main-color/0 via-secondary-color/40 to-main-color/0" />
-        )}
+        {isActive && <span className="absolute inset-x-1 -bottom-px h-px" />}
       </Link>
     </li>
   );
@@ -132,7 +130,7 @@ function DesktopNavigation({
 }) {
   return (
     <nav className={className}>
-      <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+      <ul className="text-beige dark:bg-darkSecondary/90 flex rounded-full bg-white/90 px-3 text-sm font-medium shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:ring-white/10">
         {links.map((link, linkIndex) => (
           <NavItem key={linkIndex} href={link.path}>
             {link.name}
@@ -151,7 +149,7 @@ function AvatarContainer({
     <div
       className={clsx(
         className,
-        'h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10',
+        'h-10 w-10 rounded-full p-0.5 shadow-lg backdrop-blur',
       )}
       {...props}
     />
@@ -178,7 +176,7 @@ function Avatar({
         alt=""
         sizes={large ? '4rem' : '2.25rem'}
         className={clsx(
-          'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',
+          'dark:bg-darkSecondary rounded-full object-cover',
           large ? 'h-16 w-16' : 'h-9 w-9',
         )}
         priority

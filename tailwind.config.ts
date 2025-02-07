@@ -3,6 +3,13 @@ import { type Config } from 'tailwindcss';
 
 import typographyStyles from './typography';
 
+// orange: #923113
+// darkMain: '#762F1C',
+// darkSecondary: '#762F1C',
+// darkSecondary: '#8C2517',
+// darkMain: '#AE5B22',
+// chocolat: 5a3a22
+
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: 'class',
@@ -26,8 +33,10 @@ export default {
     typography: typographyStyles,
     extend: {
       colors: {
-        'main-color': '#c76fb5',
-        'secondary-color': '#f4b7df',
+        darkMain: '#762F1C',
+        darkSecondary: 'black',
+        beige: 'beige',
+        active: 'blue',
       },
     },
   },
