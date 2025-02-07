@@ -2,10 +2,3 @@
 @import 'tailwindcss/components';
 @import './prism.css';
 @import 'tailwindcss/utilities';
-
-.bg-dark-main {
-	background-color: brown;
-}
-.bg-dark-secondary {
-	background-color: red;
-}
