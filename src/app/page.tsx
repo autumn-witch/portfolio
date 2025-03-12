@@ -5,7 +5,6 @@ import { Container } from '@/BaseComponents/Container';
 import { Catchphrase } from '@/BaseComponents/Catchphrase';
 
 import image1 from '@/images/photos/image-1.png';
-import image2 from '@/images/photos/image-2.png';
 import image3 from '@/images/photos/image-3.png';
 import image4 from '@/images/photos/image-4.png';
 import image5 from '@/images/photos/image-5.png';
@@ -15,32 +14,27 @@ import { EntryVerticalPreview } from '@/modules/journal/EntryPreview';
 
 import { type Photo } from '@/types/photos';
 
-// TODO: translate alt texts below in french
+// TODO: translate alt texts below in french !! bitch
 function Photos() {
   const photos: Array<Photo> = [
     {
       src: image1,
-      alt: 'Picture of a river surrounded with trees and sand, taken from a bridge. A small boat is floating on it.',
+      alt: "Photo d'une rivière entourée d'arbres et de sable, prise depuis un pont. Un petit bâteau flotte dessus.",
       rotation: 'rotate-2',
-    },
-    {
-      src: image2,
-      alt: "Picture of my shadow on a sunny day, I'm carrying a totebag and run my hand through my hair.",
-      rotation: '-rotate-2',
     },
     {
       src: image3,
-      alt: 'Picture of myself wearing a black short and a white t-shirt, walking into the sea, knee-deep in water',
-      rotation: 'rotate-2',
+      alt: "Photo de moi portant un short noir et un tshirt blanc, marchant dans la mer, de l'eau jusqu'aux genous",
+      rotation: '-rotate-2',
     },
     {
       src: image4,
-      alt: 'Picture of a hill filled with trees, on top of which stands a red moon.',
+      alt: "Photo d\'une colline remplie d'arbres, une lune rouge surplombant le paysage",
       rotation: 'rotate-2',
     },
     {
       src: image5,
-      alt: 'Picture of Scottie, a young black cat, laying in a white cat cushion, looking at the camera.',
+      alt: 'Photo de Scottie, un poticha noir, allongé dans un coussin pour chat, regardant la caméra.',
       rotation: '-rotate-2',
     },
   ];
