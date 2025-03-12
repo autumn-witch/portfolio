@@ -26,12 +26,14 @@ export const catchPhraseString = `Vis et écris lentement.\nCafés, plaids et ch
 /**
  * ! NEXT STEPS
  * TODO FIX A11Y CURRENT PROBLEMS
- * TODO FIX DARK THEME AUTO-SET
+ *  :arrow_up: which problems??
+ * TODO FIX DARK THEME AUTO-SET -> based on browser settings
  * TODO CHECK IF THERE ARE OTHERS A11Y ISSUES; IF SO, FIX THEM
- * TODO ADD I18N (content + handling routes and change locale)
+ * TODO SET I18N (content + handling routes and change locale)
  * TODO WRITE ONE OR TWO ENTRIES AND USE THEM
- * TODO FOLLOW SEO COURSES AND USE THE KNOWLEDGE IN THE APP
+ * TODO FOLLOW SEO COURSES AND USE THE KNOWLEDGE IN THE APP -> see FEM
  * TODO UPDATE THE README FILE
- * TODO UPDATE THE ROBOTS.TXT TO AVOID SCRAPPING
- * TODO DO ONE LAST CHECK
+ *  :arrow_up: with what?
+ * TODO UPDATE THE ROBOTS.TXT TO AVOID BEING SCRAPPED / A.I
+ * TODO EXTERNALIZE TODOS
  */
