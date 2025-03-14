@@ -12,6 +12,7 @@ import { ArrowLeftIcon } from '@/BaseComponents/Icons/ArrowLeftIcon';
 import { type EntryWithSlug } from '@/modules/journal/types';
 
 import { formatDate } from '@/lib/formatDate';
+import { EntrySources } from '@/modules/journal/EntrySources';
 
 export function EntryLayout({
   entry,
@@ -58,6 +59,7 @@ export function EntryLayout({
             <Prose className="mt-8" data-mdx-content>
               {children}
             </Prose>
+            {entry.sources && <EntrySources sources={entry.sources} />}
           </article>
         </div>
       </div>

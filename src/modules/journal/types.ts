@@ -4,6 +4,13 @@ export type Entry = {
   title: string;
   contentWarnings?: string;
   description: string;
+  sources?: Array<Source>;
+};
+
+export type Source = {
+  id: number;
+  title: string;
+  link: string;
 };
 
 type Slug = {

@@ -29,7 +29,7 @@ function Photos() {
     },
     {
       src: image4,
-      alt: "Photo d\'une colline remplie d'arbres, une lune rouge surplombant le paysage",
+      alt: "Photo d'une colline remplie d'arbres, une lune rouge surplombant le paysage",
       rotation: 'rotate-2',
     },
     {

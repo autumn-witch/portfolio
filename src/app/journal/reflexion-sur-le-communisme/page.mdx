@@ -1,0 +1,25 @@
+import { EntryLayout } from '@/modules/journal/EntryLayout';
+
+export const entry = {
+  author: 'Autumn Witch',
+  date: '2025-03-12',
+  title: 'Communisme ?',
+  contentWarnings: 'politique, capitalisme, militantisme',
+  description: 'Réflexion sur le communisme',
+  sources: [
+    { id: 0, title: 'random truc bl', link: 'bklblblbllblb' },
+    { id: 1, title: 'ouient', link: 'et pas zeldo' },
+  ],
+};
+
+export const metadata = {
+  author: entry.author,
+  date: entry.date,
+  title: entry.title,
+  contentWarnings: entry.contentWarnings,
+  description: entry.description,
+};
+
+export default (props) => <EntryLayout entry={entry} {...props} />;
+
+fjrckds
